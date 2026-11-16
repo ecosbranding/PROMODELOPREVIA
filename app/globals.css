@@ -1,1 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink-900 font-sans antialiased;
+  }
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-rose-500;
+  }
+}
+
+@layer components {
+  .btn-dark {
+    @apply inline-block bg-ink-900 text-white px-8 py-4 text-[13px] tracking-[0.15em] font-medium hover:bg-ink-700 transition-colors;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 border border-ink-300 text-ink-900 px-3.5 py-2 text-[11.5px] tracking-[0.15em] font-medium hover:bg-ink-900 hover:text-white transition-colors;
+  }
+  .link-titulo {
+    @apply block font-serif text-[17px] font-semibold leading-tight text-ink-700 hover:text-rose-700 transition-colors;
+  }
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-ink-900 focus:text-white focus:px-4 focus:py-2;
+  }
+}
